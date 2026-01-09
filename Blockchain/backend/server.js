@@ -6,11 +6,11 @@ require('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 5001;
 
-// Middleware
+// Middleware   
 app.use(cors());
 app.use(express.json());
 
-// --- Mongoose Schemas and Models ---
+// -- Mongoose Schemas and Models ---
 const donorSchema = new mongoose.Schema({
     donorAddress: { type: String, required: true },
     name: { type: String, required: true },
